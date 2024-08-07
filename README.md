@@ -1,6 +1,6 @@
 # Nexus Privilege
 
-This module allows you to create **Nexus Privilege as a global resource** and **individual Nexus Privilege resources.** For individual examples, see the usage snippets and [examples](https://github.com/terraform-nexus-modules/terraform-nexus-privilege/tree/main/examples).
+This module allows you to create **Nexus Privilege as a global resource** and **individual Nexus Privilege resources.** For individual examples, see the usage snippets and [examples](https://github.com/devops-ia/terraform-nexus-privilege/tree/main/examples).
 
 ## Provider
 You need use a [Nexus provider](https://registry.terraform.io/providers/datadrivers/nexus/latest/docs).
@@ -19,8 +19,7 @@ provider "nexus" {
 
 ```hcl
 module "nexus_privilege" {
-  source  = "terraform-nexus-modules/privilege/nexus"
-  version = "1.0.0"
+  source  = "devops-ia/privilege/nexus"
 
  nexus_privilege_application = [
     {
@@ -87,8 +86,7 @@ module "nexus_privilege" {
 
 ```hcl
 module "nexus_privilege_application" {
-  source  = "terraform-nexus-modules/privilege/nexus//modules/nexus-privilege-application"
-  version = "1.0.0"
+  source  = "devops-ia/privilege/nexus//modules/nexus-privilege-application"
 
   name        = "example_privilege"
   description = "description"
@@ -101,8 +99,7 @@ module "nexus_privilege_application" {
 
 ```hcl
 module "nexus_privilege_repository_admin" {
-  source  = "terraform-nexus-modules/privilege/nexus//modules/nexus-privilege-repository-admin"
-  version = "1.0.0"
+  source  = "devops-ia/privilege/nexus//modules/nexus-privilege-repository-admin"
 
   name        = "example_privilege"
   description = "description"
@@ -116,8 +113,7 @@ module "nexus_privilege_repository_admin" {
 
 ```hcl
 module "nexus_privilege_repository_content_selector" {
-  source  = "terraform-nexus-modules/privilege/nexus//modules/nexus-privilege-repository-content-selector"
-  version = "1.0.0"
+  source  = "devops-ia/privilege/nexus//modules/nexus-privilege-repository-content-selector"
 
   name             = "example_privilege"
   description      = "description"
@@ -132,8 +128,7 @@ module "nexus_privilege_repository_content_selector" {
 
 ```hcl
 module "nexus_privilege_repository_view" {
-  source  = "terraform-nexus-modules/privilege/nexus//modules/nexus-privilege-repository-view"
-  version = "1.0.0"
+  source  = "devops-ia/privilege/nexus//modules/nexus-privilege-repository-view"
 
   name        = "example_privilege"
   description = "description"
@@ -147,8 +142,7 @@ module "nexus_privilege_repository_view" {
 
 ```hcl
 module "nexus_privilege_script" {
-  source  = "terraform-nexus-modules/privilege/nexus//modules/nexus-privilege-script"
-  version = "1.0.0"
+  source  = "devops-ia/privilege/nexus//modules/nexus-privilege-script"
 
   name        = "example_privilege"
   description = "description"
@@ -161,8 +155,7 @@ module "nexus_privilege_script" {
 
 ```hcl
 module "nexus_privilege_wildcard" {
-  source  = "terraform-nexus-modules/privilege/nexus//modules/nexus-privilege-wildcard"
-  version = "1.0.0"
+  source  = "devops-ia/privilege/nexus//modules/nexus-privilege-wildcard"
 
   description = "description"
   pattern     = "nexus:*"
@@ -221,8 +214,8 @@ No resources.
 
 ## Authors
 
-Module is maintained by [DevOps IA](https://github.com/devops-ia) with help from [these awesome contributors](https://github.com/terraform-nexus-modules/terraform-nexus-privilege/graphs/contributors).
+Module is maintained by [DevOps IA](https://github.com/devops-ia) with help from [these awesome contributors](https://github.com/devops-ia/terraform-nexus-privilege/graphs/contributors).
 
 ## License
 
-Apache 2 Licensed. See [LICENSE](https://github.com/terraform-nexus-modules/terraform-nexus-privilege/blob/main/LICENSE) for full details.
+Apache 2 Licensed. See [LICENSE](https://github.com/devops-ia/terraform-nexus-privilege/blob/main/LICENSE) for full details.
